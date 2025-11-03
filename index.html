@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="matrix-canvas"></canvas>
+
+    <div id="header" class="section section-1">
+        <div class="container">
+            <nav>
+                <img src="images/PersonalLogo.gif" class="profilePicture">
+                <ul id="sidemenu">
+                    <img src="images/CrossImage.png" class="mobilePicture" onclick="closemenu()">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about" class="separation">About</a></li>
+                    <li><a href="#services" class="separation">Services</a></li>
+                    <li><a href="#portfolio" class="separation">Portfolio</a></li>
+                    <li><a href="#contact" class="separation">Contact</a></li>
+                </ul>
+                <img src="images/MenuImage.png" class="mobilePicture" onclick="openmenu()">
+            </nav>
+
+            <div class="header-text">
+                <p>Game Developer</p>
+                <h1>Hi, I'm <span>Liam</span><br> Grau from France</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="section section-2">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/PersonalPhotoBlack.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <div class="core-about">
+                        <p class="presentation">I’m a passionate Game Programmer currently pursuing a Master’s Degree
+                        at ISART Digital Paris.<br><br>
+                        My work focuses on engine development, graphics programming, software
+                        architecture, and gameplay, with a strong foundation in C++, C#, and
+                        real-time rendering.<br><br>
+                        I enjoy building efficient and elegant systems, from low-level optimizations
+                        to gameplay logic, and exploring new technologies in Unreal Engine and Unity
+                        to enhance my projects.<br>
+                        I’m deeply motivated by the technical challenges of game development and
+                        value collaboration and continuous learning, always striving to improve my
+                        skills and contribute to projects that push my technical limits.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Programming & Architecture</span><br>Strong expertise in C++ and C#. Experienced in building clean, modular, and optimized codebases for games and tools.</li>
+                                <li><span>Graphics & Rendering</span><br>Proficient in OpenGL and Vulkan with knowledge of real-time rendering pipelines. Focused on performance and visual quality.</li>
+                                <li><span>Game Engines</span><br>Hands-on experience with Unreal Engine and Unity. Skilled in gameplay scripting, system integration, and engine customization.</li>
+                                <li><span>Optimization & Multithreading</span><br>Experienced in profiling and optimizing code. Skilled in designing multithreaded systems to fully leverage modern CPU architectures.</li>
+                                <li><span>Networked Game Development</span><br>Proficient in developing multiplayer games with C# (System.Net) and Unreal Engine (EOS, GAS). Skilled in implementing client-server architectures and network synchronization.</li>
+                                <li><span>Project Workflow</span><br>Familiar with Agile/SCRUM methods, version control (Git, Perforce), and collaborative development environments.</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents", id="experience">
+                            <ul>
+                                <li><span>Cybersecurity Job Shadowing – Sopra Steria I2S (2025)</span><br>Discovered product creation, technical, and communication departments. Gained insight into cybersecurity workflows and teamwork across divisions.</li>
+                                <li><span>Game Development Projects – ISART Digital (2023–Present)</span><br>Worked on multiple student projects, including IrisEngine, Twilight Archery and a Donjons & Cartons (Game Jam), applying programming principles.</li>
+                                <li><span>Volunteering – Nickaël Association (2023–2024)</span><br>Assisted in the daily operation of a cat shelter. Developed teamwork, responsibility, and organizational skills.</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents", id="education">
+                            <ul>
+                                <li><span>Master’s Degree in Game Programming – ISART Digital Paris (2023–Present)</span><br>Focused on engine architecture, graphics programming, and gameplay systems using C++, C# on Unreal Engine and Unity.</li>
+                                <li><span>Scientific Foundations - Lycée Polyvalent de Cachan (2020-2023)</span><br>Studied advanced python functionalities and basic algorithms, rendering, mathematics and physics.</li>
+                                <li><span>Online Learning</span><br>I learnt the techniques through online services such as Udemy, secnumacademie, root-me, tryhackme and hackthebox.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services" class="section section-3">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <img src="images/ControllerLogo.png" class = "logo">
+                    <h2>Gameplay Programmer</h2>
+                    <p>Designing and implementing engaging gameplay systems with a focus on
+                    fluid player experience and code efficiency. I bridge technical
+                    execution through C++ / BluePrint and C# on Unreal Engine and Unity.</p>
+                    <a href="https://github.com/Liam-Grau?tab=repositories">Learn more</a>
+                </div>
+
+                <div>
+                    <img src="images/TriangleLogo.png" class = "logo">
+                    <h2>Graphic Programmer</h2>
+                    <p>Creating rendering pipelines and visual effects using OpenGL or Vulkan.
+                    Passionate about pushing visual fidelity and optimizing real-time rendering.</p>
+                    <a href="https://github.com/Liam-Grau?tab=repositories">Learn more</a>
+                </div>
+
+                <div>
+                    <img src="images/GearLogo.png" class = "logo">
+                    <h2>Engine Programmer</h2>
+                    <p>Building robust and scalable core systems, from reflection to C# scripting,
+                    to improve my game engine. I love crafting tools for others to enhance their
+                    experience with my projects.</p>
+                    <a href="https://github.com/Liam-Grau?tab=repositories">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio" class="section section-4">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/TwilightArcheryPicture.gif">
+                    <div class="layer">
+                        <h3>Twilight Archery</h3>
+                        <p>Creation of an arena-based TPS against a boss made on Unreal Engine 5
+                        in four weeks.</p>
+                        <a href="https://github.com/Liam-Grau/2024_gp_2028_tps-twilightarchery-Build"><img src="images/LinkLogo.png" class="linkPicture"></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/IBLPBRRefractionPicture.gif">
+                    <div class="layer">
+                        <h3>PBR - IBL - Refraction</h3>
+                        <p> Implementation of Physically Based Rendering, Image Based Lighting,
+                        Refraction, Transparent Objects and Normal Mapping as part of a
+                        three-week project.</p>
+                        <a href="https://github.com/Liam-Grau/2024_gp_2028_PBR-IBL-Refraction-Build"><img src="images/LinkLogo.png" class="linkPicture"></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/IrisPicture.png">
+                    <div class="layer">
+                        <h3>Iris Engine</h3>
+                        <p>Development of a C++ Game Engine with forward and deferred rendering,
+                        Jolt Physics and C# scripting system in three and a half month.</p>
+                        <a href="https://github.com/Iris-Engine-Team/Iris-Engine/tree/main"><img src="images/LinkLogo.png" class="linkPicture"></a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://github.com/Liam-Grau?tab=repositories" class="btn">See more</a>
+        </div>
+    </div>
+
+    <div id="contact" class="section section-5">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><img src="images/MailIcon.png">liamgrau01@gmail.com</p>
+                    <p><img src="images/PhoneIcon.png">+33 7 69 09 21 02</p>
+
+                    <div class="social-icons">
+                        <a href="mailto:liamgrau01@gmail.com"><img src="images/MailIcon.png"></a>
+                        <a href="https://www.linkedin.com/in/liam-grau-072394397/"><img src="images/LinkedInIcon.png"></a>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <h1 class="sub-title">Documents</h1>
+                    <a href="documents/En_CV_Liam_Grau.pdf" download class="btn">Download CV</a>
+                    <a href="documents/Fr_CV_Grau_Liam.pdf" download class="btn">Download French CV</a>
+                </div>
+            </div>
+
+            <!-- <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form> -->
+        </div>
+    </div>
+
+    <footer>
+        <p>© <span id="year"></span> Liam Grau. All rights reserved.</p>
+        <a href="/legal-notice.html">Legal notice</a>
+    </footer>
+</body>
+
+
+<!-- GSAP and ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+    // ===== PART 1 :  Matrix Animation =====
+    const canvas = document.getElementById('matrix-canvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const matrixChars = 'ｦｱｳｴｵｶｷｹｺｻｼｽｾｿﾀﾂﾃﾅﾆﾇﾈﾊﾋﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾜ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const fontSize = 16;
+    const columns = Math.floor(canvas.width / fontSize);
+    const drops = Array(columns).fill(1);
+
+    // Color object (used by GSAP)
+    const matrixColor = { r: 255, g: 255, b: 255 };
+
+    function drawMatrix()
+    {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = `rgb(${Math.round(matrixColor.r)}, ${Math.round(matrixColor.g)}, ${Math.round(matrixColor.b)})`;
+        ctx.font = `${fontSize}px monospace`;
+
+        for (let i = 0; i < drops.length; i++)
+        {
+            const char = matrixChars[Math.floor(Math.random() * matrixChars.length)];
+            ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975)
+                drops[i] = 0;
+
+            drops[i]++;
+        }
+    }
+
+    function animate()
+    {
+        drawMatrix();
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // ===== PART 2 : GSAP ScrollTrigger =====
+    gsap.registerPlugin(ScrollTrigger);
+
+    // conversion fonction  (hex to RGB)
+    function hexToRgb(hex)
+    {
+        const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16)
+        } : null;
+    }
+
+    // Colors per section
+    const colors = [
+        '#FFFFFF', // white
+        '#FFD700', // gold
+        '#FF004F', // pink
+        '#258D25', // green
+        '#00FFFF' // cyan
+        ];
+
+    // Create a timeline GSAP for each color transition
+    colors.forEach((color, index) => {
+        if (index === 0) return;
+        
+        const lastRgb = hexToRgb(colors[index - 1]);
+        const rgb = hexToRgb(color);
+
+        gsap.fromTo(matrixColor,
+        { r: lastRgb.r, g: lastRgb.g, b: lastRgb.b },
+        {
+            r: rgb.r, g: rgb.g, b: rgb.b,
+            duration: 0.5,
+            ease: "power1.inOut",
+            immediateRender: false,
+            scrollTrigger: {
+                trigger: `.section-${index + 1}`,
+                start: "top 70%",
+                end: "top 30%",
+                scrub: 0.5,
+                marks: true
+            }
+        });
+    });
+
+    // Resize handler
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const newColumns = Math.floor(canvas.width / fontSize);
+
+        drops.length = 0;
+        for (let i = 0; i < newColumns; i++) {
+            drops[i] = Math.random() * canvas.height / fontSize; // position aléatoire pour éviter le vide au redimensionnement
+        }
+    });
+</script>
+
+<script>
+    // About section interactive menu
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname)
+    {
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    // Mobile menu
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu()
+    {
+        sidemenu.style.right = "-50px";
+    }
+
+    function closemenu()
+    {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</html>
